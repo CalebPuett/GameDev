@@ -31,6 +31,8 @@ public class Movement : MonoBehaviour
             else if (vel.x < 0){
                 body.localScale = new Vector3(-1,1,1);
             }
+            
+           
         }
         else{
             animationStateChanger.ChangeAnimationState("Idle");
