@@ -28,6 +28,7 @@ public class BatSimpleAi : MonoBehaviour
         else{
             playerHealth.TakeDamage(damage);
             movement.MoveRb(Vector3.zero);
+            
            
         }
     }
@@ -39,6 +40,6 @@ public class BatSimpleAi : MonoBehaviour
         
     }
    
-        
+  
     }
 
