@@ -10,11 +10,16 @@ public class UpgradeMenu : MonoBehaviour
     public GameObject upgradeUI;
     public Button weaponButton;
     public bool weaponClicked = false;
+    public bool healthClicked = false;
+    public Button healthButton;
     // Update is called once per frame
     void Update()
     {   
         if(weaponClicked){
         weaponButton.interactable = false;
+        }
+        if(healthClicked){
+            healthButton.interactable = false;
         }
         CheckKey();
        if(isKeyPressed & isColl){
@@ -25,6 +30,8 @@ public class UpgradeMenu : MonoBehaviour
         isKeyPressed = false;
         weaponClicked = false;
         weaponButton.interactable = true;
+        healthButton.interactable = true;
+        healthClicked = false;
        }
        
     }
@@ -46,6 +53,8 @@ public class UpgradeMenu : MonoBehaviour
     }
    public void isweaponClicked(){
     weaponClicked = true;
-    
+   }
+   public void isHealthClicked(){
+    healthClicked = true;
    }
 }

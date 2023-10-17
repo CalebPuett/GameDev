@@ -9048,6 +9048,8 @@ MonoBehaviour:
   upgradeUI: {fileID: 1661035197}
   weaponButton: {fileID: 933082239}
   weaponClicked: 0
+  healthClicked: 0
+  healthButton: {fileID: 1490908452}
 --- !u!1001 &1064502685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12601,7 +12603,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1490908453}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1059479152}
+        m_TargetAssemblyTypeName: UpgradeMenu, Assembly-CSharp
+        m_MethodName: isHealthClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1970471448}
+        m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
+        m_MethodName: AddHealth
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 10
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1490908453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17088,6 +17114,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dps: {fileID: 8642428500017901688, guid: 9cf9ccf6eb6b65c45b5c68b265336e55, type: 3}
+--- !u!114 &1970471448 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7628351387493810636, guid: 0658d09a5d404a246b49cf356ba3be73, type: 3}
+  m_PrefabInstance: {fileID: 7628351387795347033}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970471439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14b72bebd9302242ac5a4e003fd3e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1979172360
 PrefabInstance:
   m_ObjectHideFlags: 0
