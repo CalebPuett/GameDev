@@ -5,16 +5,22 @@ using UnityEngine.UI;
 public class Enteract : MonoBehaviour
 {
     [SerializeField] Text pressE;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    [SerializeField] UpgradeMenu upgradeUI;
+    
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player"){
         
             pressE.text = "Press E to interact";
+            upgradeUI.isColl = true;
+            
         }
+    }
     private void OnTriggerExit2D(Collider2D collision)
     {
         pressE.text = "";
+        upgradeUI.isColl = false;
+
     }
 }
 

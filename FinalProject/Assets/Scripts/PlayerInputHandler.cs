@@ -28,6 +28,7 @@ public class PlayerInputHandler : MonoBehaviour
         if(Input.GetKey(KeyCode.S)){
             vel.y = -1;
         }
+        
         movement.MoveRb(vel);
     }
     void Update()

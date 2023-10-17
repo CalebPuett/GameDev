@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2822404405520298236}
   - component: {fileID: 4979468277888903269}
   - component: {fileID: 8642428500017901688}
+  - component: {fileID: 5913921142147820693}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -147,4 +148,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  barrelHealth: {fileID: 264127890, guid: 2c7f978272f409543b2798ec0c34081c, type: 3}
+  getDps: {fileID: 5913921142147820693}
+--- !u!114 &5913921142147820693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429236014742939036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7251e40c139714eb593b321a401247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
