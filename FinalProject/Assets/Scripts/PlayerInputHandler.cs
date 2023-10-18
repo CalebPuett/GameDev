@@ -36,7 +36,7 @@ public class PlayerInputHandler : MonoBehaviour
     
     //projectile 
     if(Input.GetMouseButtonDown(0)){
-        projectileThrower.Throw(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+     projectileThrower.Throw(Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
 }
 }
