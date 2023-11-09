@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 811551523}
   - component: {fileID: 811551524}
   - component: {fileID: 811551525}
+  - component: {fileID: 5457437032165796409}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Skel
@@ -216,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0.1
-  viewRaidus: 1.5
+  viewRadius: 11
   SkelTransform: {fileID: 7451312051299780573}
 --- !u!114 &811551525
 MonoBehaviour:
@@ -234,3 +235,17 @@ MonoBehaviour:
   maxHealth: 5
   coinPrefab: {fileID: 3209440500221595670, guid: 4dd2368e9d21a964581a452351efc56a, type: 3}
   smallHealthPackPrefab: {fileID: 8108479447311036533, guid: 98f969f7de2c3e543bbf17d597023ada, type: 3}
+--- !u!114 &5457437032165796409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7451312051299780562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dedcebcc784ca17499eb69117dd64fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  attackRate: 2

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1586997999}
   - component: {fileID: 1586998000}
   - component: {fileID: 8409172859219354940}
+  - component: {fileID: -778511088931097047}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Bat
@@ -96,8 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a816c86548389048ad27ebaaec2c3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0.1
-  viewRaidus: 1.5
+  damage: 1
+  viewRadius: 11
   batTransform: {fileID: 7184572195478708702}
 --- !u!114 &1586998000
 MonoBehaviour:
@@ -129,6 +130,20 @@ MonoBehaviour:
   maxHealth: 5
   coinPrefab: {fileID: 3209440500221595670, guid: 4dd2368e9d21a964581a452351efc56a, type: 3}
   smallHealthPackPrefab: {fileID: 8108479447311036533, guid: 98f969f7de2c3e543bbf17d597023ada, type: 3}
+--- !u!114 &-778511088931097047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7184572195478708696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06487217567960745af21b1e3d7a2611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  attackRate: 4
 --- !u!1 &7184572196602244592
 GameObject:
   m_ObjectHideFlags: 0

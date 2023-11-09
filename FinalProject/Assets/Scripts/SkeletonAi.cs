@@ -6,7 +6,7 @@ public class SkeletonAi : MonoBehaviour
 {
     SkelMovement movement;
     public float damage;
-    [SerializeField] float viewRaidus = 1;
+    [SerializeField] float viewRadius = 1;
     [SerializeField] Transform SkelTransform;
 
     private GameObject player;
@@ -20,19 +20,23 @@ public class SkeletonAi : MonoBehaviour
     }
     void Update()
     {
-        if(Vector3.Distance(SkelTransform.position,player.transform.position) > viewRaidus){
+        if(Vector3.Distance(transform.position,player.transform.position) < viewRadius){
             FollowPlayer();
         }
         else{
-           playerHealth.TakeDamage(damage);
-            movement.MoveRb(Vector3.zero);
+            Idle();
         }
     }
-    // Update is called once per frame
 
     public void FollowPlayer(){
         
         movement.MoveToward(player.transform.position);
-        
+    }
+
+    
+    
+    public void Idle(){
+        //do nothing
+        movement.stop();
     }
 }

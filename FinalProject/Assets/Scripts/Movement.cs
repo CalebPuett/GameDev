@@ -32,6 +32,7 @@ public class Movement : MonoBehaviour
                 body.localScale = new Vector3(-1,1,1);
             }
             
+            
            
         }
         else{

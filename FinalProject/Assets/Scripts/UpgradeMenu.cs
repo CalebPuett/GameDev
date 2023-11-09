@@ -12,6 +12,7 @@ public class UpgradeMenu : MonoBehaviour
     public bool weaponClicked = false;
     public bool healthClicked = false;
     public Button healthButton;
+    public GameObject playerHealthUi;
     // Update is called once per frame
     void Update()
     {   
@@ -24,6 +25,7 @@ public class UpgradeMenu : MonoBehaviour
         CheckKey();
        if(isKeyPressed & isColl){
         upgradeUI.SetActive(true);
+        playerHealthUi.SetActive(false);
         Time.timeScale = 0f;
        }
        else{
@@ -46,6 +48,7 @@ public class UpgradeMenu : MonoBehaviour
         return isColl;
     }
     public void Resume(){
+        playerHealthUi.SetActive(true);
         upgradeUI.SetActive(false);
         Time.timeScale = 1f;
         isKeyPressed = false;

@@ -38,4 +38,7 @@ public class BatMovement : MonoBehaviour
         direction = Vector3.Normalize(direction);
         MoveRb(direction);
     }
+    public void stop(){
+        MoveRb(Vector3.zero);
+    }
 }

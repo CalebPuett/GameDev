@@ -12,6 +12,7 @@ public class Enteract : MonoBehaviour
         if(collision.gameObject.tag == "Player"){
         
             pressE.text = "Press E to interact";
+            
             upgradeUI.isColl = true;
             
         }
@@ -20,7 +21,7 @@ public class Enteract : MonoBehaviour
     {
         pressE.text = "";
         upgradeUI.isColl = false;
-
+        
     }
 }
 

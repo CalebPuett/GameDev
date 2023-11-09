@@ -5,7 +5,10 @@ using UnityEngine;
 public class PlayerInputHandler : MonoBehaviour
 {
     Movement movement;
+    public Rigidbody2D rb;
     ProjectileThrower projectileThrower;
+    Vector2 mousePos;
+    public Camera cam;
     
     void  Awake()
     {
@@ -15,6 +18,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     void  FixedUpdate()
     {
+        
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector3 vel = Vector3.zero;
         if(Input.GetKey(KeyCode.D)){
             vel.x = 1;
@@ -30,6 +35,7 @@ public class PlayerInputHandler : MonoBehaviour
         }
         
         movement.MoveRb(vel);
+        
     }
     void Update()
     {
