@@ -2,32 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class PointsManager : MonoBehaviour
+public class UpgradeButtons : MonoBehaviour
 {
-  
-    public static PointsManager instance;
+   
+
+   
+   
+   
+    
     public PLayerInfoSo coinsSo;
     [SerializeField] Text notEnough;
-   
-    // Start is called before the first frame update
+    
     [SerializeField] Text scoreText;
     
-    public void Awake(){
-        instance = this;
+    void Start()
+    {
         notEnough.enabled = false;
+
     }
     void Update()
     {
         scoreText.text = coinsSo.coins.ToString();
+    }
+    public void purchase(int ammount){
+        if(ammount < coinsSo.coins){
+            coinsSo.coins = coinsSo.coins - ammount;
+        }
+        else{
+            notEnough.enabled = true;
+            
+           
+
+            }
         
+     
     }
-
-    public int getCoins(){
-
-        return coinsSo.coins;
-    }
-
-    
-    
-  
+   
 }

@@ -4,24 +4,28 @@ using UnityEngine;
 using UnityEngine.UI;
 public class UpgradeMenu : MonoBehaviour
 {
+    public bool speedClicked;
     public static bool IsGameRunning = false;
     public static bool isKeyPressed = false;
     public bool isColl = false;
     public GameObject upgradeUI;
+    public Button speedBoost;
+    public int speedBoostAmount = 10;
     public Button weaponButton;
     public bool weaponClicked = false;
-    public bool healthClicked = false;
-    public Button healthButton;
+    public bool speelsClicked = false;
+    public Button speelsButton;
     public GameObject playerHealthUi;
+    [SerializeField] GameObject boostUi;
+    [SerializeField] Button backButton;
     // Update is called once per frame
     void Update()
     {   
-        if(weaponClicked){
-        weaponButton.interactable = false;
-        }
-        if(healthClicked){
-            healthButton.interactable = false;
-        }
+      
+       if(weaponClicked || speelsClicked ){
+        boostUi.SetActive(false);
+        backButton.gameObject.SetActive(true);
+       }
         CheckKey();
        if(isKeyPressed & isColl){
         upgradeUI.SetActive(true);
@@ -31,9 +35,10 @@ public class UpgradeMenu : MonoBehaviour
        else{
         isKeyPressed = false;
         weaponClicked = false;
-        weaponButton.interactable = true;
-        healthButton.interactable = true;
-        healthClicked = false;
+        speelsClicked = false;
+        boostUi.SetActive(true);
+        backButton.gameObject.SetActive(false);
+        
        }
        
     }
@@ -57,7 +62,14 @@ public class UpgradeMenu : MonoBehaviour
    public void isweaponClicked(){
     weaponClicked = true;
    }
-   public void isHealthClicked(){
-    healthClicked = true;
+   public void isSpellesClicked(){
+    speelsClicked = true;
+   }
+   public void backButtonClicked(){
+        weaponClicked = false;
+        speelsClicked = false;
+         boostUi.SetActive(true);
+         backButton.gameObject.SetActive(false);
+         
    }
 }
