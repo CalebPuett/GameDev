@@ -5,6 +5,14 @@ using UnityEngine;
 public class PlayerInputHandler : MonoBehaviour
 {
     Movement movement;
+    public GameObject fireBallPrefab;
+    public GameObject lightningPrefab;
+    public GameObject voidPrefab;
+    private bool lUnlock = false;
+    private bool vUnlock = false;
+    private bool iUnlock = false;
+    public GameObject icePrefab;
+    public PLayerInfoSo activeSpell;
     public Rigidbody2D rb;
     ProjectileThrower projectileThrower;
     Vector2 mousePos;
@@ -14,6 +22,8 @@ public class PlayerInputHandler : MonoBehaviour
     {
         movement = GetComponent<Movement>();
         projectileThrower = GetComponent<ProjectileThrower>();
+        activeSpell.activeSpell = fireBallPrefab;
+
     }
 
     void  FixedUpdate()
@@ -33,16 +43,37 @@ public class PlayerInputHandler : MonoBehaviour
         if(Input.GetKey(KeyCode.S)){
             vel.y = -1;
         }
+       
         
         movement.MoveRb(vel);
         
     }
     void Update()
     {
-    
+    if(Input.GetKey(KeyCode.Alpha1)){
+        activeSpell.activeSpell = fireBallPrefab;
+    }
+    if(lUnlock && Input.GetKey(KeyCode.Alpha2)){
+            activeSpell.activeSpell = lightningPrefab;
+        }
+        if(vUnlock && Input.GetKey(KeyCode.Alpha3)){
+            activeSpell.activeSpell = voidPrefab;
+        }
+        if(iUnlock && Input.GetKey(KeyCode.Alpha4)){
+            activeSpell.activeSpell = icePrefab;
+        }
     //projectile 
     if(Input.GetMouseButtonDown(0)){
-     projectileThrower.Throw(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+     projectileThrower.Throw(Camera.main.ScreenToWorldPoint(Input.mousePosition),activeSpell.activeSpell);
     }
+}
+public void lActive(){
+        lUnlock = true;
+    }
+public void vActive(){
+    vUnlock = true;
+}
+public void iActive(){
+    iUnlock = true;
 }
 }

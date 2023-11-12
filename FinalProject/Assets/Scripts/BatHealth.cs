@@ -8,14 +8,29 @@ public class BatHealth : MonoBehaviour
     public int maxHealth = 5;
     public GameObject coinPrefab;
     public GameObject smallHealthPackPrefab;
+    public PLayerInfoSo spell;
+    private GameObject activeSpell;
+    public GameObject icePrefab;
+    public GameObject firPrefab;
+    public GameObject voidPrefab;
+    public GameObject lightningPrefab;
+    public BatMovement movement;
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
+        activeSpell = spell.activeSpell;
+        movement = GetComponent<BatMovement>();
        
     }
-
+    void Update()
+    {
+        activeSpell = spell.activeSpell;
+    }
    public void TakeDamage(int damageDealt){
+        if(activeSpell == icePrefab){
+            movement.ice();
+        }
         health -= damageDealt;
         int coinChance = Random.Range(0,3);
         int healthChance = Random.Range(0,7);
@@ -29,6 +44,8 @@ public class BatHealth : MonoBehaviour
             }
 
         }
+        
    }
+
    
 }

@@ -44,4 +44,7 @@ public class Movement : MonoBehaviour
         direction = Vector3.Normalize(direction);
         MoveRb(direction);
     }
+    public void SbUpgrade(){
+        speed +=1;
+    }
 }

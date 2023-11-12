@@ -8,9 +8,13 @@ public class BatMovement : MonoBehaviour
     
     [SerializeField] Transform body;
     Rigidbody2D rb;
+    //float frozenTime = 0f;
+    //float resumeTime = 4f;
+    
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        
     }
     void Start(){
         
@@ -40,5 +44,17 @@ public class BatMovement : MonoBehaviour
     }
     public void stop(){
         MoveRb(Vector3.zero);
+    }
+    public void ice(){
+        float regSpeed = speed;
+        StartCoroutine(SlowDown());
+        //speed = regSpeed;
+        IEnumerator SlowDown(){
+            speed = speed/2;
+            yield return new WaitForSeconds(4);
+            speed = regSpeed;
+            yield return null;
+        }
+        
     }
 }

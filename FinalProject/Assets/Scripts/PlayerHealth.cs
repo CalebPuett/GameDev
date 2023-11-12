@@ -9,11 +9,14 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
 
     public HealthBar healthBar;
+    public PLayerInfoSo info;
     // Start is called before the first frame update
     
     void Start()
     {
-        health = maxHealth;
+
+        health = info.health;
+        maxHealth = info.maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
 
@@ -31,6 +34,13 @@ public class PlayerHealth : MonoBehaviour
         health += HealthAdded;
         healthBar.SetHealth(health);
     }
+   
+   }
+   public void increaseMaxHealth(){
+    info.maxHealth +=10;
+    maxHealth += 10; 
+    healthBar.SetMaxHealth(maxHealth);
+    healthBar.SetHealth(health);
    
    }
    

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ProjectileThrower : MonoBehaviour
 {
-  public GameObject projectilePrefab;
+  
   public Transform gun;
   [SerializeField] float speed = 10f;
-  public void Throw(Vector3 targetPosition){
+  public void Throw(Vector3 targetPosition,GameObject projectilePrefab){
             
 
    Rigidbody2D newRB = Instantiate(projectilePrefab,gun.position,Quaternion.identity).GetComponent<Rigidbody2D>();

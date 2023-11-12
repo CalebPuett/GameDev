@@ -9,5 +9,8 @@ public class PLayerInfoSo : ScriptableObject
         
     
     public int coins = 0;
+    public GameObject activeSpell;
+    public int maxHealth = 100;
+    public float health = 100;
 
 }
