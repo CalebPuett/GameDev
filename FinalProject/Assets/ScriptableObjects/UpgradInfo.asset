@@ -15,3 +15,9 @@ MonoBehaviour:
   SbAmmount: 10
   EhAmount: 10
   Armor: 10
+  lSpellCost: 10
+  vSpellCost: 10
+  iSpellCost: 10
+  iUnlock: 1
+  vUnlock: 1
+  LUnlock: 1

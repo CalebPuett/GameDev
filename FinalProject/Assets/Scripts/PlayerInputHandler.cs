@@ -8,16 +8,22 @@ public class PlayerInputHandler : MonoBehaviour
     public GameObject fireBallPrefab;
     public GameObject lightningPrefab;
     public GameObject voidPrefab;
-    private bool lUnlock = false;
-    private bool vUnlock = false;
-    private bool iUnlock = false;
+   
     public GameObject icePrefab;
     public PLayerInfoSo activeSpell;
     public Rigidbody2D rb;
     ProjectileThrower projectileThrower;
+    public UpgradeSystem upgradeSo;
     Vector2 mousePos;
     public Camera cam;
-    
+    private float iceAttackSpeed = 2f;
+    float iceNextAttackTime;
+    private float fireAttackSpeed = 2f;
+    float fireNextAttack;
+    private float voidAttackSpeed = 2f;
+    float voidNextAttack;
+    private float lightningAttackSpeed = 2f;
+    float lightningNextAttack;
     void  Awake()
     {
         movement = GetComponent<Movement>();
@@ -53,27 +59,43 @@ public class PlayerInputHandler : MonoBehaviour
     if(Input.GetKey(KeyCode.Alpha1)){
         activeSpell.activeSpell = fireBallPrefab;
     }
-    if(lUnlock && Input.GetKey(KeyCode.Alpha2)){
+    if(upgradeSo.LUnlock  && Input.GetKey(KeyCode.Alpha2)){
             activeSpell.activeSpell = lightningPrefab;
         }
-        if(vUnlock && Input.GetKey(KeyCode.Alpha3)){
+        if(upgradeSo.vUnlock && Input.GetKey(KeyCode.Alpha3)){
             activeSpell.activeSpell = voidPrefab;
         }
-        if(iUnlock && Input.GetKey(KeyCode.Alpha4)){
+        if(upgradeSo.iUnlock && Input.GetKey(KeyCode.Alpha4)){
             activeSpell.activeSpell = icePrefab;
         }
     //projectile 
+    
     if(Input.GetMouseButtonDown(0)){
-     projectileThrower.Throw(Camera.main.ScreenToWorldPoint(Input.mousePosition),activeSpell.activeSpell);
+        if(activeSpell.activeSpell == fireBallPrefab){
+            if(Time.time >= fireNextAttack){
+                projectileThrower.Throw(Camera.main.ScreenToWorldPoint(Input.mousePosition),activeSpell.activeSpell);
+                fireNextAttack = Time.time +1f /fireAttackSpeed;
+            }
+        }
+        if(activeSpell.activeSpell == icePrefab){
+            if(Time.time >= iceNextAttackTime){
+                projectileThrower.Throw(Camera.main.ScreenToWorldPoint(Input.mousePosition),activeSpell.activeSpell);
+                iceNextAttackTime = Time.time +1f /iceAttackSpeed;
+            }
+        }
+        if(activeSpell.activeSpell == voidPrefab){
+            if(Time.time >= voidNextAttack){
+                    projectileThrower.Throw(Camera.main.ScreenToWorldPoint(Input.mousePosition),activeSpell.activeSpell);
+                    voidNextAttack = Time.time +1f /voidAttackSpeed;
+                }
+    }
+    if(activeSpell.activeSpell == lightningPrefab){
+            if(Time.time >= lightningNextAttack){
+                    projectileThrower.Throw(Camera.main.ScreenToWorldPoint(Input.mousePosition),activeSpell.activeSpell);
+                    lightningNextAttack = Time.time +1f /lightningAttackSpeed;
+                }
     }
 }
-public void lActive(){
-        lUnlock = true;
+
     }
-public void vActive(){
-    vUnlock = true;
-}
-public void iActive(){
-    iUnlock = true;
-}
 }

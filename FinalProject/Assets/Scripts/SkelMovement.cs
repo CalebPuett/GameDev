@@ -41,4 +41,16 @@ public class SkelMovement : MonoBehaviour
     public void stop(){
         MoveRb(Vector3.zero);
     }
+     public void ice(){
+        float regSpeed = speed;
+        
+        StartCoroutine(SlowDown());
+        //speed = regSpeed;
+        IEnumerator SlowDown(){
+            speed = speed/2;
+            yield return new WaitForSeconds(2);
+            speed = regSpeed;
+            yield return null;
+        }
+     }
 }

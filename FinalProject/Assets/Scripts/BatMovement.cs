@@ -51,7 +51,7 @@ public class BatMovement : MonoBehaviour
         //speed = regSpeed;
         IEnumerator SlowDown(){
             speed = speed/2;
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(2);
             speed = regSpeed;
             yield return null;
         }

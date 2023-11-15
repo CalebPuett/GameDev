@@ -16,6 +16,7 @@ public class UpgradeMenu : MonoBehaviour
     public Button aBoost;
     public int speedBoostAmount = 10;
     [SerializeField] GameObject speelsPage;
+    [SerializeField] GameObject speelsBoost;
     public Button weaponButton;
     public bool weaponClicked = false;
     public bool speelsClicked = false;
@@ -74,9 +75,14 @@ public class UpgradeMenu : MonoBehaviour
     }
    public void isweaponClicked(){
     weaponClicked = true;
+    boostUi.SetActive(false);
+    speelsPage.SetActive(false);
+    backButton.gameObject.SetActive(true);
+    speelsBoost.SetActive(true);
    }
    public void isSpellesClicked(){
         speelsClicked = true;
+        speelsBoost.SetActive(false);
         boostUi.SetActive(false);
         backButton.gameObject.SetActive(true);
         speelsPage.SetActive(true);
@@ -87,6 +93,6 @@ public class UpgradeMenu : MonoBehaviour
         speelsClicked = false;
          boostUi.SetActive(true);
          backButton.gameObject.SetActive(false);
-         
+         speelsPage.SetActive(false);
    }
 }

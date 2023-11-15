@@ -8,10 +8,11 @@ public class Movement : MonoBehaviour
     [SerializeField] AnimationStateChanger animationStateChanger;
     [SerializeField] Transform body;
     Rigidbody2D rb;
-    
+    public PLayerInfoSo infoSo;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        speed = infoSo.speed;
     }
     void Start(){
         
@@ -46,5 +47,7 @@ public class Movement : MonoBehaviour
     }
     public void SbUpgrade(){
         speed +=1;
+        infoSo.speed +=1;
     }
+
 }

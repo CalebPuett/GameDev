@@ -12,5 +12,10 @@ public class PLayerInfoSo : ScriptableObject
     public GameObject activeSpell;
     public int maxHealth = 100;
     public float health = 100;
+    public float speed = 5;
+    public int lSpellDamage = 1;
+    public int vSpellDamge = 1;
+    public int iSpellDamage = 1;
+    public int fSpellDamage = 1;
 
 }
