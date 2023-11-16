@@ -37,7 +37,7 @@ public class UpgradeMenu : MonoBehaviour
        if(upgradeSystem.EhAmount == 40){
         ehBoost.interactable = false;
        }
-       if(upgradeSystem.Armor == 40){
+       if(upgradeSystem.ssAmount == 40){
         aBoost.interactable = false;
        }
         CheckKey();
@@ -71,6 +71,8 @@ public class UpgradeMenu : MonoBehaviour
         upgradeUI.SetActive(false);
         Time.timeScale = 1f;
         isKeyPressed = false;
+        speelsBoost.SetActive(false);
+        speelsPage.SetActive(false);
         
     }
    public void isweaponClicked(){
@@ -94,5 +96,6 @@ public class UpgradeMenu : MonoBehaviour
          boostUi.SetActive(true);
          backButton.gameObject.SetActive(false);
          speelsPage.SetActive(false);
+         speelsBoost.SetActive(false);
    }
 }

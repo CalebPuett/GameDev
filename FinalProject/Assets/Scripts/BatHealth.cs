@@ -31,6 +31,8 @@ public class BatHealth : MonoBehaviour
         if(activeSpell == icePrefab){
             movement.ice();
         }
+       
+        
         health -= damageDealt;
         int coinChance = Random.Range(0,3);
         int healthChance = Random.Range(0,7);
@@ -49,3 +51,4 @@ public class BatHealth : MonoBehaviour
 
    
 }
+

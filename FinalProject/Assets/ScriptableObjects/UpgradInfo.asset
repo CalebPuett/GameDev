@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d0460947ffaf0a43a5ca9c7bd179478, type: 3}
   m_Name: UpgradInfo
   m_EditorClassIdentifier: 
-  SbAmmount: 10
-  EhAmount: 10
-  Armor: 10
+  SbAmmount: 40
+  EhAmount: 40
+  ssAmount: 10
   lSpellCost: 10
   vSpellCost: 10
   iSpellCost: 10

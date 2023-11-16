@@ -10,6 +10,7 @@ public class DestroyBullet : MonoBehaviour
       public GameObject firePrefab;
       public GameObject voidPrefab;
       public GameObject lightningPrefab;
+
    void OnTriggerEnter2D(Collider2D other)
    {
       if(infoSo.activeSpell == icePrefab){
@@ -20,6 +21,7 @@ public class DestroyBullet : MonoBehaviour
       }
       else if(infoSo.activeSpell == voidPrefab){
          damage = infoSo.vSpellDamge;
+          
       }
       else if(infoSo.activeSpell == lightningPrefab){
          damage = infoSo.lSpellDamage;

@@ -34,7 +34,7 @@ public class UpgradeButtons : MonoBehaviour
         notEnough.enabled = false;
         sbAmount.text = ammounts.SbAmmount.ToString();
         ehAmount.text = ammounts.EhAmount.ToString();
-        aAmount.text = ammounts.Armor.ToString();
+        aAmount.text = ammounts.ssAmount.ToString();
         if(ammounts.SbAmmount == 20){
             Sb.color = Color.red;
         }
@@ -59,14 +59,14 @@ public class UpgradeButtons : MonoBehaviour
             secEh.color = Color.red;
             Eh.color = Color.red;
         }
-        if(ammounts.Armor == 20){
+        if(ammounts.ssAmount == 20){
             A.color = Color.red;
         }
-      if(ammounts.Armor == 30){
+      if(ammounts.ssAmount == 30){
             secA.color = Color.red;
             A.color = Color.red;
         }
-       if(ammounts.Armor == 40){
+       if(ammounts.ssAmount == 40){
             thA.color = Color.red;
             secA.color = Color.red;
             A.color = Color.red;
@@ -106,13 +106,14 @@ public class UpgradeButtons : MonoBehaviour
         }
         
             if(aClick){
-                if(ammounts.Armor <= coinsSo.coins){
-                    coinsSo.coins = coinsSo.coins - ammounts.Armor;
+                if(ammounts.ssAmount <= coinsSo.coins){
+                    coinsSo.coins = coinsSo.coins - ammounts.ssAmount;
                     AfillBox();
                     aClick = false;
                     notEnough.enabled = false;
-                    ammounts.Armor += 10;
-                    aAmount.text = ammounts.Armor.ToString();
+                    ammounts.ssAmount += 10;
+                    aAmount.text = ammounts.ssAmount.ToString();
+                    coinsSo.spellSpeed+=1;
            }
            else{
              notEnough.enabled = true;

@@ -48,6 +48,7 @@ public class Movement : MonoBehaviour
     public void SbUpgrade(){
         speed +=1;
         infoSo.speed +=1;
+        infoSo.spellSpeed +=1;
     }
 
 }
