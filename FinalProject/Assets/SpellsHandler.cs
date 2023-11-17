@@ -14,6 +14,7 @@ public class SpellsHandler : MonoBehaviour
     public Button iSpell;
     public Button v;
 
+   
     void Update()
     {
         if(usSo.LUnlock){
@@ -43,6 +44,7 @@ public class SpellsHandler : MonoBehaviour
             }
              else{
                 notEnough.enabled = true;
+                lClick = false;
              }
         }
         if(vClick){
@@ -52,6 +54,7 @@ public class SpellsHandler : MonoBehaviour
         }
         else{
                 notEnough.enabled = true;
+                vClick = false;
              }
     }
         if(iClick){
@@ -62,7 +65,8 @@ public class SpellsHandler : MonoBehaviour
             }
              else{
                 notEnough.enabled = true;
+                iClick = false;
              }
         }
-}
+    }
 }

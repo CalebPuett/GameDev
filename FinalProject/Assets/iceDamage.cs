@@ -2,19 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class lightningDamage : MonoBehaviour
+public class iceDamage : MonoBehaviour
 {
-    public int damage;
-    float liveTime = 1f;
-    [SerializeField] PLayerInfoSo infoSo;
-    // Update is called once per frame
-    void Start()
+   [SerializeField] int damage;
+   [SerializeField] PLayerInfoSo infoSo;
+   void Update()
     {
-        Destroy(gameObject,liveTime);
-    }
-    void Update()
-    {
-        damage = infoSo.lSpellDamage;
+        damage = infoSo.iSpellDamage;
     }
     void OnTriggerEnter2D(Collider2D other)
     {

@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c7e194db301e046981fa0e895e2d76, type: 3}
   m_Name: PlayerInfo
   m_EditorClassIdentifier: 
-  coins: 8819
+  coins: 950
   activeSpell: {fileID: 4779642833014373603, guid: 7e950dae0adb9cc49a1132110dda8e84, type: 3}
   maxHealth: 130
   health: 100
   speed: 8
   spellSpeed: 12
-  lSpellDamage: 4
+  lSpellDamage: 3
   vSpellDamge: 1
-  iSpellDamage: 4
-  fSpellDamage: 4
+  iSpellDamage: 1
+  fSpellDamage: 1

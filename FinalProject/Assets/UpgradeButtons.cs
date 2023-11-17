@@ -6,7 +6,7 @@ public class UpgradeButtons : MonoBehaviour
 {
    
 
-   
+    
     public Image Sb;
     public Text sbAmount;
     public Text ehAmount;

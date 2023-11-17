@@ -6,7 +6,8 @@ public class UpgradeMenu : MonoBehaviour
 {
     public bool speedClicked;
    
-
+    public Text newSpellNotEnough;
+    public Text spellBoostNotEnough;
     public static bool IsGameRunning = false;
     public static bool isKeyPressed = false;
     public bool isColl = false;
@@ -14,6 +15,7 @@ public class UpgradeMenu : MonoBehaviour
     public Button speedBoost;
     public Button ehBoost;
     public Button aBoost;
+    public Text notEnough; 
     public int speedBoostAmount = 10;
     [SerializeField] GameObject speelsPage;
     [SerializeField] GameObject speelsBoost;
@@ -73,6 +75,9 @@ public class UpgradeMenu : MonoBehaviour
         isKeyPressed = false;
         speelsBoost.SetActive(false);
         speelsPage.SetActive(false);
+        notEnough.enabled = false;
+        spellBoostNotEnough.enabled = false;
+        newSpellNotEnough.enabled = false;
         
     }
    public void isweaponClicked(){
@@ -97,5 +102,9 @@ public class UpgradeMenu : MonoBehaviour
          backButton.gameObject.SetActive(false);
          speelsPage.SetActive(false);
          speelsBoost.SetActive(false);
+         notEnough.enabled = false;
+          spellBoostNotEnough.enabled = false;
+        newSpellNotEnough.enabled = false;
+         
    }
 }

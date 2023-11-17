@@ -14,6 +14,7 @@ public class UpgradeSystem : ScriptableObject
     public int lSpellCost;
     public int vSpellCost;
     public int iSpellCost;
+    public int fSpellCost;
     public bool iUnlock = false;
     public bool vUnlock = false;
     public bool LUnlock = false;

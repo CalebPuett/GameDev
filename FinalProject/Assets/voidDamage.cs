@@ -5,26 +5,28 @@ using UnityEngine;
 public class voidDamage : MonoBehaviour
 {
 
-           public PLayerInfoSo infoSo;
-            int tmplDamage;
-            int tmpIDamage;
-            int tmpfDamage;
-           void  Start()
-           { 
-                int tmplDamage =  infoSo.lSpellDamage;
-                int tmpIDamage = infoSo.iSpellDamage;
-                int tmpfDamage = infoSo.fSpellDamage;
-                StartCoroutine(damageBuff());
-               
-            
-           }
-            
-            IEnumerator damageBuff(){
-                infoSo.lSpellDamage *= 2;
-                infoSo.iSpellDamage *= 2;
-                infoSo.fSpellDamage *= 2;
-                yield return new WaitForSeconds(4);
-               
-                yield return null;
-            }
+    [SerializeField] int damage;
+   [SerializeField] PLayerInfoSo infoSo;
+   void Update()
+    {
+        damage = infoSo.vSpellDamge;
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.tag == "Barrel"){
+         other.gameObject.GetComponent<BarrelHealth>().TakeDamage(damage);
+         Destroy(this.gameObject);
+      }
+      else if(other.gameObject.tag == "Bat"){
+         other.gameObject.GetComponent<BatHealth>().TakeDamage(damage);
+         Destroy(this.gameObject);
+      }
+      else if(other.gameObject.tag == "Skel"){
+         other.gameObject.GetComponent<SkeletonHealth>().TakeDamage(damage);
+         Destroy(this.gameObject);
+      }
+     else if(other.gameObject.tag != "Player"){
+       Destroy(this.gameObject);
+    }
+    }
 }

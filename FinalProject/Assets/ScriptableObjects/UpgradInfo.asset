@@ -15,9 +15,10 @@ MonoBehaviour:
   SbAmmount: 40
   EhAmount: 40
   ssAmount: 10
-  lSpellCost: 10
+  lSpellCost: 30
   vSpellCost: 10
   iSpellCost: 10
+  fSpellCost: 10
   iUnlock: 1
   vUnlock: 1
   LUnlock: 1

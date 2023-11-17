@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3775236033736015468}
   - component: {fileID: 7366126008124126758}
-  - component: {fileID: -139155681272170532}
   - component: {fileID: 4277602984499714589}
   - component: {fileID: -3255359985730625163}
   - component: {fileID: 6603986898961588271}
@@ -88,24 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-139155681272170532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6207042815025976607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45661098ed3ce3c46a678b89c8cf4601, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  infoSo: {fileID: 11400000, guid: 00ef2068ec047e84a9d1ae0044d27ede, type: 2}
-  icePrefab: {fileID: 3429809138058894721, guid: de37523146a2ea64f9c4c54b13b00521, type: 3}
-  firePrefab: {fileID: 4779642833014373603, guid: 7e950dae0adb9cc49a1132110dda8e84, type: 3}
-  voidPrefab: {fileID: 6207042815025976607}
-  lightningPrefab: {fileID: 3666405213020737789, guid: d8af09dafdaa4894a899197056496a96, type: 3}
 --- !u!58 &4277602984499714589
 CircleCollider2D:
   m_ObjectHideFlags: 0
