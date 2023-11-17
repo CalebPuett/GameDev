@@ -10,6 +10,7 @@ public class SpellsBoostHandler : MonoBehaviour
    public Text fireAmmount;
    public Text voidAmmount;
    public Text iceAmmount;
+   public Text notEnough;
    public Image l1;
    public Image l2;
    public Image l3;
@@ -27,6 +28,7 @@ public class SpellsBoostHandler : MonoBehaviour
   
    public Button vSpellButton;
    public Button iSpellButton;
+   public Button fSpellButton;
    void Start()
    {
 
@@ -56,7 +58,7 @@ public class SpellsBoostHandler : MonoBehaviour
         iceAmmount.text = usSo.iSpellCost.ToString();
         voidAmmount.text = usSo.vSpellCost.ToString();
          if(usSo.lSpellCost == 20){
-         l1.color = Color.red;
+            l1.color = Color.red;
         }
         if(usSo.lSpellCost == 30){
          l2.color = Color.red;
@@ -68,15 +70,88 @@ public class SpellsBoostHandler : MonoBehaviour
          l1.color = Color.red;
          lSpellButton.interactable = false;
         }
-        
+        if(usSo.fSpellCost == 20){
+         f1.color = Color.red;
+        }
+        if(usSo.fSpellCost == 30){
+         f2.color = Color.red;
+         f1.color = Color.red;
+        }
+        if(usSo.fSpellCost == 40){
+          f2.color = Color.red;
+         f1.color = Color.red;
+         f3.color = Color.red;
+         fSpellButton.interactable = false;
+        }
+        if(usSo.vSpellCost == 20){
+         v1.color = Color.red;
+        }
+        if(usSo.vSpellCost == 30){
+         v2.color = Color.red;
+         v1.color = Color.red;
+        }
+        if(usSo.vSpellCost == 40){
+         v3.color = Color.red;
+         v2.color = Color.red;
+         v1.color = Color.red;
+         vSpellButton.interactable = false;
+        }
+        if(usSo.iSpellCost == 20){
+         i1.color = Color.red;
+        }
+        if(usSo.iSpellCost == 30){
+         i2.color = Color.red;
+         i1.color = Color.red;
+        }
+        if(usSo.iSpellCost == 40){
+          i2.color = Color.red;
+         i1.color = Color.red;
+         i3.color = Color.red;
+         iSpellButton.interactable = false;
+        }
    }
 
   
    public void lightIncrease(){
    if(usSo.lSpellCost <= infoSo.coins){
       infoSo.lSpellDamage+=1;
+      infoSo.coins = infoSo.coins - usSo.lSpellCost;
       usSo.lSpellCost += 10;
       }
+   else{
+      notEnough.enabled = true;
+   }
 
+   }
+   public void voidIncrease(){
+      if(usSo.vSpellCost <= infoSo.coins){
+         infoSo.vSpellDamge +=1;
+         infoSo.coins = infoSo.coins - usSo.vSpellCost;
+         usSo.vSpellCost += 10;
+      }
+      else{
+      notEnough.enabled = true;
+   }
+   }
+   public void iceIncrease(){
+      if(usSo.iSpellCost <= infoSo.coins){
+         infoSo.iSpellDamage += 1;
+         infoSo.coins = infoSo.coins - usSo.iSpellCost;
+         usSo.iSpellCost += 10;
+      }
+      else{
+      notEnough.enabled = true;
+   }
+   }
+   public void fireIncrease(){
+      if(usSo.fSpellCost <= infoSo.coins){
+         infoSo.fSpellDamage +=1;
+         infoSo.coins = infoSo.coins - usSo.fSpellCost;
+         usSo.fSpellCost +=10;
+
+      }
+      else{
+      notEnough.enabled = true;
+   }
    }
 }

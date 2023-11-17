@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SbAmmount: 40
   EhAmount: 40
-  ssAmount: 10
-  lSpellCost: 30
-  vSpellCost: 10
-  iSpellCost: 10
-  fSpellCost: 10
+  ssAmount: 20
+  lSpellCost: 40
+  vSpellCost: 40
+  iSpellCost: 40
+  fSpellCost: 40
   iUnlock: 1
   vUnlock: 1
   LUnlock: 1

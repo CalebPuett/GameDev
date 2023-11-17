@@ -32971,6 +32971,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4774846950647718594, guid: 609d4a82e677e874fa5389fa8d77a78a, type: 3}
   m_PrefabInstance: {fileID: 1453691488}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1454449696 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4887844499991538060, guid: baba2722459937042a89418ba980abb9, type: 3}
+  m_PrefabInstance: {fileID: 5306289347771332768}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1455294921 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4774846950647718594, guid: 609d4a82e677e874fa5389fa8d77a78a, type: 3}
@@ -73308,6 +73319,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1257193052}
     - target: {fileID: 1775167880, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: fSpellButton
+      value: 
+      objectReference: {fileID: 1454449696}
+    - target: {fileID: 1775167880, guid: baba2722459937042a89418ba980abb9, type: 3}
       propertyPath: iSpellButton
       value: 
       objectReference: {fileID: 826815447}
@@ -73351,9 +73366,93 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1183723469087097608, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183723469087097608, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183723469087097608, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 533910156}
+    - target: {fileID: 1183723469087097608, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183723469087097608, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: voidIncrease
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183723469087097608, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SpellsBoostHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183723469087097608, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823566455509707902, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823566455509707902, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823566455509707902, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 533910156}
+    - target: {fileID: 1823566455509707902, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823566455509707902, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: iceIncrease
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823566455509707902, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SpellsBoostHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823566455509707902, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1959010478717575216, guid: baba2722459937042a89418ba980abb9, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4887844499991538060, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4887844499991538060, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4887844499991538060, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 533910156}
+    - target: {fileID: 4887844499991538060, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4887844499991538060, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: fireIncrease
+      objectReference: {fileID: 0}
+    - target: {fileID: 4887844499991538060, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SpellsBoostHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4887844499991538060, guid: baba2722459937042a89418ba980abb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5306289347251149341, guid: baba2722459937042a89418ba980abb9, type: 3}
       propertyPath: m_IsActive
