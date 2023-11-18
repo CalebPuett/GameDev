@@ -15,7 +15,9 @@ public class Spawner : MonoBehaviour
     public float rate;
     public int count;
     
+    
     }
+  
     [SerializeField] Wave[] waves;
     public Transform[] SpawnPoints;
     private int nextWave = 0;
@@ -25,11 +27,12 @@ public class Spawner : MonoBehaviour
     private SpawnState state = SpawnState.COUNTING;
     void Start()
     {
-        waveCountdown = timeBetweenWaves;
+        waveCountdown = 0f;
     }
 
     void  Update()
     {
+        
         if(state == SpawnState.WAITING){
             if(!EnemyIsAlive()){
                 waveCompleted();
@@ -53,14 +56,11 @@ public class Spawner : MonoBehaviour
         waveCountdown = timeBetweenWaves;
         if(nextWave + 1 > waves.Length -1){
             nextWave = 0;
-            Debug.Log("All Waves Complete! Looping");
+            Destroy(this.gameObject);
         }
-        else{
-            nextWave++;
-        }
+        
     }
     IEnumerator SpawnWave(Wave wave){
-        Debug.Log("Spawning Wave");
         state = SpawnState.SPAWNING;
 
         for(int i = 0; i < wave.count; i++){

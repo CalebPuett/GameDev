@@ -9,6 +9,8 @@ public class PointsManager : MonoBehaviour
     public PLayerInfoSo coinsSo;
     [SerializeField] Text notEnough;
    
+    public Text eCount;
+    public int count;
     // Start is called before the first frame update
     [SerializeField] Text scoreText;
     
@@ -19,7 +21,7 @@ public class PointsManager : MonoBehaviour
     void Update()
     {
         scoreText.text = coinsSo.coins.ToString();
-        
+        getECount();
     }
 
     public int getCoins(){
@@ -27,7 +29,10 @@ public class PointsManager : MonoBehaviour
         return coinsSo.coins;
     }
 
-    
+    public void getECount(){
+        count = GameObject.FindGameObjectsWithTag("Bat").Length + GameObject.FindGameObjectsWithTag("Skel").Length;
+        eCount.text = count.ToString();
+    }
     
   
 }

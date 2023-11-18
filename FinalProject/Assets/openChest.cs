@@ -5,28 +5,19 @@ using UnityEngine;
 public class openChest : MonoBehaviour
 {
     [SerializeField] GameObject coinPrefab;
-    [SerializeField] GameObject Spawnpoint;
-    public bool keyPressed;
+    [SerializeField] SpawnPoint coinSpawn;
+    
+    public bool isCol;
     void OnTriggerEnter2D(Collider2D other)
     {
         
         if(other.gameObject.tag == "Player"){
-           spawnCoin();
+          coinSpawn.isCol = true;
         }
-    }
-    public void checkKey(){
-        if(Input.GetKeyDown(KeyCode.E)){
-            keyPressed = true;
-        }
-    }
-    void Update()
+ 
+    } 
+    void OnTriggerExit2D(Collider2D other)
     {
-        checkKey();
-    }
-    void spawnCoin(){
-        if(keyPressed){
-                GameObject newCoin = Instantiate(coinPrefab,Spawnpoint.transform.position,Quaternion.identity);
-                keyPressed = false;
-        }
+        coinSpawn.isCol = false;
     }
 }
