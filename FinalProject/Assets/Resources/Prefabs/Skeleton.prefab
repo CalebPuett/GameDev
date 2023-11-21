@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: f0a29932d340c0a4e9aa03f9e2800c8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -116,10 +116,10 @@ GameObject:
   - component: {fileID: 7451312051299780573}
   - component: {fileID: 2074740140}
   - component: {fileID: 2074740139}
-  - component: {fileID: 811551523}
-  - component: {fileID: 811551524}
   - component: {fileID: 811551525}
   - component: {fileID: 5457437032165796409}
+  - component: {fileID: 105995985}
+  - component: {fileID: 105995986}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Skel
@@ -156,7 +156,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1.5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -190,35 +190,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4709928, y: 0.95079005}
   m_EdgeRadius: 0
---- !u!114 &811551523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7451312051299780562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c90fe393002d08d41baa00750e7eda3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
-  body: {fileID: 7451312050695890555}
---- !u!114 &811551524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7451312051299780562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e13af5197378224b80e1982fc09fcee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0.1
-  viewRadius: 11
-  SkelTransform: {fileID: 7451312051299780573}
 --- !u!114 &811551525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,7 +211,7 @@ MonoBehaviour:
   firPrefab: {fileID: 4779642833014373603, guid: 7e950dae0adb9cc49a1132110dda8e84, type: 3}
   voidPrefab: {fileID: 6207042815025976607, guid: 27c06069d8ba04e418f6eb7939236b98, type: 3}
   lightningPrefab: {fileID: 3666405213020737789, guid: d8af09dafdaa4894a899197056496a96, type: 3}
-  movement: {fileID: 811551523}
+  movement: {fileID: 0}
 --- !u!114 &5457437032165796409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,3 +226,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   attackRate: 2
+--- !u!114 &105995985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7451312051299780562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115866c2ee9021b4fb07d4e7aebdbd1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 400
+  nextWayPointDistance: 3
+  viewRadius: 20
+  enemyBody: {fileID: 7451312050695890555}
+--- !u!114 &105995986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7451312051299780562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1

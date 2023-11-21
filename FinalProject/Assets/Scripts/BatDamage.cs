@@ -5,18 +5,18 @@ using UnityEngine;
 public class BatDamage : MonoBehaviour
 {
     public float damage = 1;
-    BatMovement movement;
+    //BatMovement movement;
     public float attackRate = 2f;
     float nextAttackTime = 0f;
     void Awake()
     {
-       movement = GetComponent<BatMovement>();
+       //movement = GetComponent<BatMovement>();
     }
     
    void OnTriggerStay2D(Collider2D other)
     {   
 
-       movement.MoveRb(Vector3.zero);
+      // movement.MoveRb(Vector3.zero);
        if(other.gameObject.tag == "Player"){
             if(Time.time >= nextAttackTime){
             other.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
