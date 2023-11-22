@@ -17,12 +17,14 @@ public class EnemyAi : MonoBehaviour
     Seeker seeker;
     Rigidbody2D rb;
     public Transform enemyBody;
+    float regSpeed;
     // Start\ is called before the first frame update
     void Start()
     {
+        float regSpeed = speed;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("HitBox");
          if(Vector3.Distance(transform.position,player.transform.position) < viewRadius){
             InvokeRepeating("UpdatePath",0f,.5f);
          
@@ -74,4 +76,19 @@ public class EnemyAi : MonoBehaviour
             enemyBody.localScale = new Vector3(1f,1f,1f);
         }
     }
+    public void ice(){
+        regSpeed = speed;
+        StartCoroutine(SlowDown());
+        //speed = regSpeed;
+        IEnumerator SlowDown(){
+            if(speed != 200){
+                speed = speed/2;
+            }
+            yield return new WaitForSeconds(2);
+            speed = regSpeed;
+            yield return null;
+        }
+        
+    }
+   
 }

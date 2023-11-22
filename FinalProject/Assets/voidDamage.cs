@@ -25,7 +25,7 @@ public class voidDamage : MonoBehaviour
          other.gameObject.GetComponent<SkeletonHealth>().TakeDamage(damage);
          Destroy(this.gameObject);
       }
-     else if(other.gameObject.tag != "Player"){
+     else if(other.gameObject.tag != "Player" && other.gameObject.tag != "HitBox"){
        Destroy(this.gameObject);
     }
     }

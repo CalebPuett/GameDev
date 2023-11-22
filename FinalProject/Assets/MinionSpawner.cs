@@ -11,16 +11,19 @@ public class MinionSpawner : MonoBehaviour
     void  Start()
     {
         health = GetComponent<bossHealth>();
-        StartCoroutine(SpawnMinions());
+        StartSpawn();
         
     }
 
+    public void StartSpawn(){
+        StartCoroutine(SpawnMinions());
     IEnumerator SpawnMinions()
 {
     while(health.isAlive()){
-    yield return new WaitForSeconds(2);
-    Instantiate(spiderPrefab,bossTransform.position,Quaternion.identity);
+        yield return new WaitForSeconds(2);
+        Instantiate(spiderPrefab,bossTransform.position,Quaternion.identity);
     }
     yield return null;
-}
+     }
+    }
 }

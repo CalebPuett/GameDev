@@ -14,13 +14,13 @@ public class BatHealth : MonoBehaviour
     public GameObject firPrefab;
     public GameObject voidPrefab;
     public GameObject lightningPrefab;
-    public BatMovement movement;
+    public EnemyAi movement;
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
         activeSpell = spell.activeSpell;
-        movement = GetComponent<BatMovement>();
+        movement = GetComponent<EnemyAi>();
        
     }
     void Update()

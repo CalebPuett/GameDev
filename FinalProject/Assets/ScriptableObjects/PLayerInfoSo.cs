@@ -11,7 +11,7 @@ public class PLayerInfoSo : ScriptableObject
     public int coins = 0;
     public GameObject activeSpell;
     public int maxHealth;
-    public float health;
+    public int health;
     public float speed;
     public float spellSpeed;
     public int lSpellDamage;

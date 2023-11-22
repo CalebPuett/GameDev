@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossAi : MonoBehaviour
 {
     SpiderBossMovement movement;
-    public float damage;
+    public int damage;
     [SerializeField] float viewRaidus = 1;
     [SerializeField] Transform bossTransform;
     private GameObject player;

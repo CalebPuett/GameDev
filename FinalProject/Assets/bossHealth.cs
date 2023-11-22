@@ -6,8 +6,7 @@ public class bossHealth : MonoBehaviour
 {
     public int health = 0;
     public int maxHealth = 5;
-    public GameObject coinPrefab;
-    public GameObject smallHealthPackPrefab;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +20,7 @@ public class bossHealth : MonoBehaviour
         int healthChance = Random.Range(0,7);
         if(health <= 0){
             Destroy(this.gameObject);
-            if(coinChance == 0){
-            GameObject newCoin = Instantiate(coinPrefab,this.gameObject.transform.position,Quaternion.identity);
-            }
-            else if(healthChance == 0){
-                GameObject newHealth = Instantiate(smallHealthPackPrefab,this.gameObject.transform.position,Quaternion.identity);
-            }
+            
 
         }
    }

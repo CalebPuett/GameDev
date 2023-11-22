@@ -8,22 +8,25 @@ public class SkeletonHealth : MonoBehaviour
     public int maxHealth = 5;
     public GameObject coinPrefab;
     public GameObject smallHealthPackPrefab;
-     public PLayerInfoSo spell;
-    private GameObject activeSpell;
+     private PLayerInfoSo spell;
+    public GameObject activeSpell;
     public GameObject icePrefab;
     public GameObject firPrefab;
     public GameObject voidPrefab;
     public GameObject lightningPrefab;
-    public SkelMovement movement;
+    public EnemyAi movement;
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
         activeSpell = spell.activeSpell;
-        movement = GetComponent<SkelMovement>();
+        movement = GetComponent<EnemyAi>();
        
     }
-
+    void Update()
+    {
+        activeSpell = spell.activeSpell;
+    }
    public void TakeDamage(int damageDealt){
         if(activeSpell == icePrefab){
             movement.ice();

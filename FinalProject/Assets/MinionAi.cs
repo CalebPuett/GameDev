@@ -5,7 +5,7 @@ using UnityEngine;
 public class MinionAi : MonoBehaviour
 {
     MinionMovement movement;
-    public float damage;
+    public int damage;
     [SerializeField] float viewRaidus = 1;
     [SerializeField] Transform minionTransfrom;
     private GameObject player;

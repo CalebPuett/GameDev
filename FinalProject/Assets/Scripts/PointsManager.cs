@@ -16,7 +16,9 @@ public class PointsManager : MonoBehaviour
     
     public void Awake(){
         instance = this;
+        if(notEnough != null){
         notEnough.enabled = false;
+        }
     }
     void Update()
     {
