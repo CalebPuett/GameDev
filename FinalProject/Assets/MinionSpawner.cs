@@ -6,24 +6,26 @@ public class MinionSpawner : MonoBehaviour
 {
    [SerializeField] GameObject spiderPrefab;
    [SerializeField] Transform bossTransform;
-   bossHealth health;
-
+   [SerializeField] bossHealth health;
+    public int checkHealth;
     void  Start()
     {
         health = GetComponent<bossHealth>();
-        StartSpawn();
+        checkHealth = health.getHealth();
         
     }
 
     public void StartSpawn(){
         StartCoroutine(SpawnMinions());
+    }
     IEnumerator SpawnMinions()
 {
-    while(health.isAlive()){
-        yield return new WaitForSeconds(2);
+    while(GameObject.FindGameObjectsWithTag("min").Length == 0){
+        yield return new WaitForSeconds(10);
         Instantiate(spiderPrefab,bossTransform.position,Quaternion.identity);
+        yield return null;
     }
     yield return null;
      }
-    }
 }
+

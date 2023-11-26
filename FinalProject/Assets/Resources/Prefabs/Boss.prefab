@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1427275613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1427275614}
+  m_Layer: 0
+  m_Name: BossProjectileSpot
+  m_TagString: boss
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1427275614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427275613}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.37, y: -1.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7155821911558660627}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7155821911558660636
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,9 +45,11 @@ GameObject:
   - component: {fileID: 7155821911558660638}
   - component: {fileID: 7155821911558660639}
   - component: {fileID: 1005800155}
+  - component: {fileID: 1417182391}
+  - component: {fileID: 1417182399}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,6 +67,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7155821911691674626}
+  - {fileID: 1427275614}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -110,9 +144,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70619f26bab49574e8371db08f008dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 0
   viewRaidus: 1.5
   bossTransform: {fileID: 7155821911558660627}
+  attackRate: 3
+  spawner: {fileID: 1005800155}
 --- !u!114 &1005800155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,6 +163,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spiderPrefab: {fileID: 7077252065440698979, guid: b3b738cca1e4b374987ba40648318920, type: 3}
   bossTransform: {fileID: 7155821911558660627}
+  health: {fileID: 1417182391}
+  checkHealth: 0
+--- !u!114 &1417182391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7155821911558660636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f98a9e5974b64446b9b97e54012c0a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+  maxHealth: 5
+--- !u!114 &1417182399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7155821911558660636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e208e8012d8394aaa18d92008d5f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouth: {fileID: 1427275614}
+  speed: 10
+  VenumPrefabb: {fileID: 3159526859224787737, guid: 73c7c91da4d1b71479bc7e216e68ac64, type: 3}
 --- !u!1 &7155821911691674627
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +206,7 @@ GameObject:
   - component: {fileID: 7155821911691674629}
   m_Layer: 0
   m_Name: BossBody
-  m_TagString: Untagged
+  m_TagString: boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

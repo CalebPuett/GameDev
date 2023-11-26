@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 2660042476540392014}
   m_Layer: 0
   m_Name: SpiderMinion
-  m_TagString: Untagged
+  m_TagString: min
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d37a9c0ca5b3aaf4f99a1b2db03095d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0.1
+  damage: 0
   viewRaidus: 1
   minionTransfrom: {fileID: 16455813679185247}
 --- !u!114 &7537146489210387170
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14292b746bfb024dbef5e38b3326584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 4
   body: {fileID: 4029984764490646102}
 --- !u!50 &3841554289628280683
 Rigidbody2D:

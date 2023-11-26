@@ -11,13 +11,13 @@ public class PointsManager : MonoBehaviour
    
     public Text eCount;
     public int count;
-    [SerializeField] GameObject unlockUpgrade;
+    
     // Start is called before the first frame update
     [SerializeField] Text scoreText;
     
     public void Awake(){
         instance = this;
-        unlockUpgrade.SetActive(true);
+        
         if(notEnough != null){
         notEnough.enabled = false;
         }
@@ -37,7 +37,7 @@ public class PointsManager : MonoBehaviour
         count = GameObject.FindGameObjectsWithTag("Bat").Length + GameObject.FindGameObjectsWithTag("Skel").Length;
         eCount.text = count.ToString();
         if(count == 0){
-            unlockUpgrade.SetActive(false);
+            
         }
     }
     

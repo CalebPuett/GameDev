@@ -21,7 +21,7 @@ public class SpiderBossMovement : MonoBehaviour
     }
     public void MoveRb(Vector3 vel){
         rb.velocity = vel * speed;
-      
+        
            //if(vel.x > 0){
           //     body.localScale = new Vector3(1,1,1);
            //}
