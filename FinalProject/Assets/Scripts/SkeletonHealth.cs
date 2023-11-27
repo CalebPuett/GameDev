@@ -8,8 +8,8 @@ public class SkeletonHealth : MonoBehaviour
     public int maxHealth = 5;
     public GameObject coinPrefab;
     public GameObject smallHealthPackPrefab;
-     private PLayerInfoSo spell;
-    public GameObject activeSpell;
+     public PLayerInfoSo spell;
+    private GameObject activeSpell;
     public GameObject icePrefab;
     public GameObject firPrefab;
     public GameObject voidPrefab;

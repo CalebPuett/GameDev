@@ -36,10 +36,13 @@ public class PointsManager : MonoBehaviour
     public void getECount(){
         count = GameObject.FindGameObjectsWithTag("Bat").Length + GameObject.FindGameObjectsWithTag("Skel").Length;
         eCount.text = count.ToString();
-        if(count == 0){
-            
-        }
+        
     }
-    
+    public bool checkRoundEnd(){
+        if(eCount.text == "0"){
+            return true;
+        }
+        return false;
+    }
   
 }

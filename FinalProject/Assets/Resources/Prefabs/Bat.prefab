@@ -121,7 +121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   attackRate: 4
-  player: {fileID: 0}
 --- !u!114 &335879840
 MonoBehaviour:
   m_ObjectHideFlags: 0

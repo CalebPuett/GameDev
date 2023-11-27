@@ -25,7 +25,7 @@ public class EnemyAi : MonoBehaviour
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("HitBox");
-         if(Vector3.Distance(transform.position,player.transform.position) < viewRadius){
+          if(Vector3.Distance(transform.position,player.transform.position) > viewRadius){
             InvokeRepeating("UpdatePath",0f,.5f);
          
         seeker.StartPath(rb.position,player.transform.position,onPathComplete);
@@ -47,9 +47,7 @@ public class EnemyAi : MonoBehaviour
     // Update is called once per frame
      void FixedUpdate()
     {
-        
-    
-    
+       
         if(path == null){
             return;
         }

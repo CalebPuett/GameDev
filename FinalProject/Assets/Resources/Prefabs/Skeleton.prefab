@@ -211,7 +211,7 @@ MonoBehaviour:
   firPrefab: {fileID: 4779642833014373603, guid: 7e950dae0adb9cc49a1132110dda8e84, type: 3}
   voidPrefab: {fileID: 6207042815025976607, guid: 27c06069d8ba04e418f6eb7939236b98, type: 3}
   lightningPrefab: {fileID: 3666405213020737789, guid: d8af09dafdaa4894a899197056496a96, type: 3}
-  movement: {fileID: 0}
+  movement: {fileID: 105995985}
 --- !u!114 &5457437032165796409
 MonoBehaviour:
   m_ObjectHideFlags: 0

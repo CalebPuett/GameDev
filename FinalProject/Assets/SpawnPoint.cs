@@ -10,13 +10,14 @@ public class SpawnPoint : MonoBehaviour
 [SerializeField] GameObject chest;
 [SerializeField] float radius = 5f;
 [SerializeField] AnimationStateChanger animationStateChanger;
+
 void Update()
 {
     CheckKey();
    
     if(isCol && isKeyPressed){
         animationStateChanger.ChangeAnimationState("ChestOpen");
-        Destroy(chest,1f);
+        Invoke("delayChest",1f);
         SpawnCoins();
     }
     isKeyPressed = false;
@@ -40,6 +41,11 @@ public void SpawnCoins(){
          Quaternion rot = Quaternion.Euler(0,angleDegress, 0);
          Instantiate (coinPrefab,pos,Quaternion.identity);
     }
+    
+}
+void delayChest(){
+    animationStateChanger.ChangeAnimationState("chestClose");
+    chest.SetActive(false);
     
 }
 }
