@@ -18,11 +18,12 @@ public class Spawner : MonoBehaviour
     
     }
   
-    [SerializeField] Wave[] waves;
+    public Wave[] waves;
     public Transform[] SpawnPoints;
     private int nextWave = 0;
     public float timeBetweenWaves = 5f;
     private float waveCountdown;
+    public bool startNext = false;
     private float searchCountdown = 1f;
     private SpawnState state = SpawnState.COUNTING;
     void Start()
@@ -42,8 +43,10 @@ public class Spawner : MonoBehaviour
             }
         }
         if(waveCountdown <= 0){
+            startNext = false;
             if(state != SpawnState.SPAWNING){
                 StartCoroutine(SpawnWave(waves[nextWave]));
+                
             }
         }
         else{
@@ -54,10 +57,8 @@ public class Spawner : MonoBehaviour
         Debug.Log("Wave Completed!");
         state = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;
-        if(nextWave + 1 > waves.Length -1){
-            nextWave = 0;
-            Destroy(this.gameObject);
-        }
+       
+        nextWave = 0;
         
     }
     IEnumerator SpawnWave(Wave wave){
@@ -84,7 +85,12 @@ public class Spawner : MonoBehaviour
     void SpawnEnemy (GameObject bat, GameObject skel){
        
         Transform sp = SpawnPoints[Random.Range(0,SpawnPoints.Length)];
-        Instantiate (bat,sp.position,Quaternion.identity);
-        Instantiate(skel,sp.position,Quaternion.identity);
+        Instantiate (bat,this.transform.position,Quaternion.identity);
+        Instantiate(skel,this.transform.position,Quaternion.identity);
+    }
+    public void nextRound(){
+        state = SpawnState.COUNTING;
+        waveCountdown = 0;
+        waves[nextWave].count = waves[nextWave].count *2;
     }
 }

@@ -18,5 +18,7 @@ public class PLayerInfoSo : ScriptableObject
     public int vSpellDamge;
     public int iSpellDamage;
     public int fSpellDamage;
+    public bool round1Complete;
+    public bool round2Complete;
 
 }
