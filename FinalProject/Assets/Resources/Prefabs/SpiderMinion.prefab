@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: cd00b5ec600baba49828b409523df971, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -93,10 +93,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 16455813679185247}
-  - component: {fileID: 8012218686139753779}
-  - component: {fileID: 7537146489210387170}
   - component: {fileID: 3841554289628280683}
   - component: {fileID: 2660042476540392014}
+  - component: {fileID: 1989109491}
+  - component: {fileID: 1989109492}
   m_Layer: 0
   m_Name: SpiderMinion
   m_TagString: min
@@ -120,35 +120,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8012218686139753779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7077252065440698979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d37a9c0ca5b3aaf4f99a1b2db03095d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
-  viewRaidus: 1
-  minionTransfrom: {fileID: 16455813679185247}
---- !u!114 &7537146489210387170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7077252065440698979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f14292b746bfb024dbef5e38b3326584, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
-  body: {fileID: 4029984764490646102}
 --- !u!50 &3841554289628280683
 Rigidbody2D:
   serializedVersion: 4
@@ -180,7 +151,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.010714531, y: 0.11785889}
@@ -196,3 +167,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.97857094, y: 0.9785712}
   m_EdgeRadius: 0
+--- !u!114 &1989109491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7077252065440698979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164740cd1a7a39e4bbc94c3bfb7a8dd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  attackRate: 2
+--- !u!114 &1989109492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7077252065440698979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115866c2ee9021b4fb07d4e7aebdbd1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 200
+  nextWayPointDistance: 3
+  viewRadius: 20
+  enemyBody: {fileID: 4029984764490646102}

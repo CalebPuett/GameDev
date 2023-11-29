@@ -19,7 +19,7 @@ public class nextRound : MonoBehaviour
         spawn1.GetComponent<Spawner>().nextRound();
         spawn2.GetComponent<Spawner>().nextRound();
         spawn3.GetComponent<Spawner>().nextRound();
-        spawn4.GetComponent<Spawner>().nextRound();
+        //spawn4.GetComponent<Spawner>().nextRound();
     }
        
     }

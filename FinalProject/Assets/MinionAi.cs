@@ -5,23 +5,24 @@ using UnityEngine;
 public class MinionAi : MonoBehaviour
 {
     MinionMovement movement;
-    public int damage;
+    public int damage =1;
     [SerializeField] float viewRaidus = 1;
     [SerializeField] Transform minionTransfrom;
     private GameObject player;
     PlayerHealth playerHealth;
-   
+    private GameObject playerHitBox;
 
     void  Awake()
     {
         movement = GetComponent<MinionMovement>();
         player = GameObject.FindGameObjectWithTag("Player");
+        playerHitBox = GameObject.FindGameObjectWithTag("HitBox");
         playerHealth = player.GetComponent<PlayerHealth>();
         
     }
     void Update()
     {
-        if(Vector3.Distance(minionTransfrom.position,player.transform.position) > viewRaidus){
+        if(Vector3.Distance(minionTransfrom.position,playerHitBox.transform.position) > viewRaidus){
             FollowPlayer();
         }
         else{
@@ -35,7 +36,7 @@ public class MinionAi : MonoBehaviour
 
     public void FollowPlayer(){
         
-        movement.MoveToward(player.transform.position);
+        movement.MoveToward(playerHitBox.transform.position);
         
     }
 }

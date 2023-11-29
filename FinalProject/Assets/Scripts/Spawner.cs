@@ -84,7 +84,7 @@ public class Spawner : MonoBehaviour
     }
     void SpawnEnemy (GameObject bat, GameObject skel){
        
-        Transform sp = SpawnPoints[Random.Range(0,SpawnPoints.Length)];
+        
         Instantiate (bat,this.transform.position,Quaternion.identity);
         Instantiate(skel,this.transform.position,Quaternion.identity);
     }

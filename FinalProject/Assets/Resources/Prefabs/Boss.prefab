@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 7155821911558660625}
   - component: {fileID: 7155821911558660638}
   - component: {fileID: 7155821911558660639}
-  - component: {fileID: 1005800155}
   - component: {fileID: 1417182391}
   - component: {fileID: 1417182399}
   m_Layer: 0
@@ -148,23 +147,7 @@ MonoBehaviour:
   viewRaidus: 1.5
   bossTransform: {fileID: 7155821911558660627}
   attackRate: 3
-  spawner: {fileID: 1005800155}
---- !u!114 &1005800155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7155821911558660636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ecaa0c152183e044bf9a9c84031b35c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spiderPrefab: {fileID: 7077252065440698979, guid: b3b738cca1e4b374987ba40648318920, type: 3}
-  bossTransform: {fileID: 7155821911558660627}
-  health: {fileID: 1417182391}
-  checkHealth: 0
+  spawner: {fileID: 0}
 --- !u!114 &1417182391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +162,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   maxHealth: 5
+  healthBar: {fileID: 0}
+  coinPrefab: {fileID: 0}
+  spawner: {fileID: 0}
+  end: {fileID: 0}
 --- !u!114 &1417182399
 MonoBehaviour:
   m_ObjectHideFlags: 0
