@@ -6,6 +6,7 @@ public class VenumDamage : MonoBehaviour
 {
     public int damge = 1;
     private GameObject player;
+    public bool destroy = false;
      PlayerHealth playerHealth;
     void Awake()
     {
@@ -16,11 +17,10 @@ public class VenumDamage : MonoBehaviour
     {
         if(other.gameObject.tag == "HitBox"){
             playerHealth.TakeDamage(damge);
-            Destroy(this.gameObject);
-           
+            this.gameObject.SetActive(false);
         }
        else if(other.gameObject.tag == "walls"){
-        Destroy(this.gameObject);
+        this.gameObject.SetActive(false);;
        }
     }
 }
