@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class PlayerInputHandler : MonoBehaviour
 {
+    AudioSource audioSource;
+    [SerializeField] AudioClip lightningClip;
+    [SerializeField] AudioClip fireClip;
+    [SerializeField] AudioClip iceClip;
     Movement movement;
     public GameObject fireBallPrefab;
     public GameObject lightningPrefab;
@@ -29,6 +33,7 @@ public class PlayerInputHandler : MonoBehaviour
         movement = GetComponent<Movement>();
         projectileThrower = GetComponent<ProjectileThrower>();
         activeSpell.activeSpell = fireBallPrefab;
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -74,12 +79,14 @@ public class PlayerInputHandler : MonoBehaviour
         if(activeSpell.activeSpell == fireBallPrefab){
             if(Time.time >= fireNextAttack){
                 projectileThrower.Throw(Camera.main.ScreenToWorldPoint(Input.mousePosition),activeSpell.activeSpell);
+                audioSource.PlayOneShot(fireClip);
                 fireNextAttack = Time.time +1f /fireAttackSpeed;
             }
         }
         if(activeSpell.activeSpell == icePrefab){
             if(Time.time >= iceNextAttackTime){
                 projectileThrower.Throw(Camera.main.ScreenToWorldPoint(Input.mousePosition),activeSpell.activeSpell);
+                audioSource.PlayOneShot(iceClip);
                 iceNextAttackTime = Time.time +1f /iceAttackSpeed;
             }
         }
@@ -92,6 +99,7 @@ public class PlayerInputHandler : MonoBehaviour
     if(activeSpell.activeSpell == lightningPrefab){
             if(Time.time >= lightningNextAttack){
                     projectileThrower.Throw(Camera.main.ScreenToWorldPoint(Input.mousePosition),activeSpell.activeSpell);
+                    audioSource.PlayOneShot(lightningClip);
                     lightningNextAttack = Time.time +1f /lightningAttackSpeed;
                 }
     }

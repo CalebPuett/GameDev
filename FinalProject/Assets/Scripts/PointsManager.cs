@@ -7,21 +7,23 @@ public class PointsManager : MonoBehaviour
   
     public static PointsManager instance;
     public PLayerInfoSo coinsSo;
-    [SerializeField] Text notEnough;
+    
    
     public Text eCount;
     public int count;
-    
+    public static PointsManager singelton;
     // Start is called before the first frame update
     [SerializeField] Text scoreText;
-    
-    public void Awake(){
-        instance = this;
-        
-        if(notEnough != null){
-        notEnough.enabled = false;
-        }
+    public static PointsManager singleton;
+   void Awake()
+   {
+    if(singleton == null){
+        singleton = this;
     }
+    else{
+        Destroy(this.gameObject);
+    }
+   }
     void Update()
     {
         scoreText.text = coinsSo.coins.ToString();

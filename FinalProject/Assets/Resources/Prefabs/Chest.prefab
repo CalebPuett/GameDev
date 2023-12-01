@@ -168,7 +168,7 @@ MonoBehaviour:
   isKeyPressed: 0
   coinPrefab: {fileID: 3209440500221595670, guid: 4dd2368e9d21a964581a452351efc56a, type: 3}
   chest: {fileID: 203926552102984245}
-  radius: 2
+  radius: 1
   animationStateChanger: {fileID: 139582140}
 --- !u!1 &203926552102984245
 GameObject:

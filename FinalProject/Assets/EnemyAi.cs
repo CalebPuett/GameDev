@@ -7,11 +7,12 @@ public class EnemyAi : MonoBehaviour
 
    
 
-    public float speed = 200;
+    public float speed = 400;
     private GameObject player;
     public float nextWayPointDistance = 3f;
     Path path;
-    public int viewRadius = 1;
+
+    public int viewRadius = 20;
     int currentWayPoint = 0;
     bool reachedEndOfPath = false;
     Seeker seeker;

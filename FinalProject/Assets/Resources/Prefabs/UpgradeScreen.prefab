@@ -3758,7 +3758,24 @@ MonoBehaviour:
   fireAmmount: {fileID: 4623440535119196163}
   voidAmmount: {fileID: 3573998514864809039}
   iceAmmount: {fileID: 4788142055220812395}
+  notEnough: {fileID: 0}
+  l1: {fileID: 4921831847402019849}
+  l2: {fileID: 1541419570690144320}
+  l3: {fileID: 1854883483394918844}
+  v1: {fileID: 7538343653766502876}
+  v2: {fileID: 5481739238230796643}
+  v3: {fileID: 390899724114933943}
+  f1: {fileID: 5161041349424209056}
+  f2: {fileID: 303605170548435434}
+  f3: {fileID: 5733830697080154364}
+  i1: {fileID: 555025692418955441}
+  i2: {fileID: 3721969862718227692}
+  i3: {fileID: 6230556536799984004}
   usSo: {fileID: 11400000, guid: c4956328127c8e74d91fa55bef3d4a19, type: 2}
+  lSpellButton: {fileID: 257405799509165057}
+  vSpellButton: {fileID: 1183723469087097608}
+  iSpellButton: {fileID: 1823566455509707902}
+  fSpellButton: {fileID: 4887844499991538060}
 --- !u!1 &2090119466622786972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3955,7 +3972,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4442743418484435673}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1775167880}
+        m_TargetAssemblyTypeName: SpellsBoostHandler, Assembly-CSharp
+        m_MethodName: fireIncrease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2492008533925832070
 GameObject:
   m_ObjectHideFlags: 0
@@ -4377,7 +4406,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 70067899186363115}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1775167880}
+        m_TargetAssemblyTypeName: SpellsBoostHandler, Assembly-CSharp
+        m_MethodName: voidIncrease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3728844651622541048
 GameObject:
   m_ObjectHideFlags: 0
@@ -6130,7 +6171,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8782450608933239407}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1775167880}
+        m_TargetAssemblyTypeName: SpellsBoostHandler, Assembly-CSharp
+        m_MethodName: iceIncrease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6917442669710393544
 GameObject:
   m_ObjectHideFlags: 0
@@ -6956,7 +7009,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 382400997910514355}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1775167880}
+        m_TargetAssemblyTypeName: SpellsBoostHandler, Assembly-CSharp
+        m_MethodName: lightIncrease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9204645518274143678
 GameObject:
   m_ObjectHideFlags: 0

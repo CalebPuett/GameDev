@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class Movement : MonoBehaviour
 {
     AudioSource audioSource;
@@ -11,6 +11,8 @@ public class Movement : MonoBehaviour
     Rigidbody2D rb;
     public PLayerInfoSo infoSo;
    [SerializeField] AudioClip clip;
+   public 
+   
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -38,7 +40,7 @@ public class Movement : MonoBehaviour
                 body.localScale = new Vector3(-1,1,1);
             }
             if(!audioSource.isPlaying){
-                audioSource.PlayOneShot(clip);
+                audioSource.Play();
             }
             
         }
