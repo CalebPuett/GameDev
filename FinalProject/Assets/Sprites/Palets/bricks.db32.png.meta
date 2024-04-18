@@ -101,6 +101,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -19627,11 +19639,11 @@ TextureImporter:
       bricks.db32_607: 975575706
       bricks.db32_836: 864203582
       bricks.db32_48: -2094547120
-      bricks.db32_667: -1224311881
+      bricks.db32_624: 1220635142
       bricks.db32_158: 1265599645
       bricks.db32_600: -1941634017
+      bricks.db32_667: -1224311881
       bricks.db32_877: 1040429986
-      bricks.db32_624: 1220635142
       bricks.db32_327: 364089868
       bricks.db32_292: 890691658
       bricks.db32_582: 1670645580
@@ -19741,8 +19753,8 @@ TextureImporter:
       bricks.db32_914: -133547751
       bricks.db32_75: -1129228149
       bricks.db32_148: 179238765
-      bricks.db32_262: 684566255
       bricks.db32_496: 1445718472
+      bricks.db32_262: 684566255
       bricks.db32_525: 1225011014
       bricks.db32_688: -528513780
       bricks.db32_708: 1539698152
