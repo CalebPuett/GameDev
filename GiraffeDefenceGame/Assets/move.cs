@@ -14,24 +14,26 @@ public class move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+       rb = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-    
-       Move();
+    Move();
+      
     }
     public void Move(){
         
-        if(wayPointsIndex <= Waypoints.Length -1 ){
-            transform.position = Vector2.MoveTowards(transform.position , Waypoints[wayPointsIndex].transform.position, speed*Time.deltaTime);
-
+         
+            
+            transform.position = Vector2.MoveTowards(transform.position,Waypoints[wayPointsIndex].transform.position,speed*Time.deltaTime);
 
             if(transform.position == Waypoints[wayPointsIndex].transform.position){
+                
                 wayPointsIndex += 1;
             }
+            
         }
         }
-}
