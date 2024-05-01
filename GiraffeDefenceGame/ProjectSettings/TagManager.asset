@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Path
+  - crock
+  - Points
   layers:
   - Default
   - TransparentFX
